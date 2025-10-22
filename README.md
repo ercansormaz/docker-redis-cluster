@@ -57,7 +57,7 @@ After this step, your cluster is ready to use!
 
 ---
 
-## 🧠 Verify Cluster Status
+## 🧠 Verify Cluster Status
 
 You can verify the cluster configuration by running:
 ```bash
