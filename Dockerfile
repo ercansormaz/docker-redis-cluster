@@ -56,9 +56,9 @@ RUN set -eux; \
 	gosu --version; \
 	gosu nobody true
 
-ENV REDIS_VERSION 7.2.3
-ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-7.2.3.tar.gz
-ENV REDIS_DOWNLOAD_SHA 3e2b196d6eb4ddb9e743088bfc2915ccbb42d40f5a8a3edd8cb69c716ec34be7
+ENV REDIS_VERSION 7.2.11
+ENV REDIS_DOWNLOAD_URL http://download.redis.io/releases/redis-7.2.11.tar.gz
+ENV REDIS_DOWNLOAD_SHA 2f9886eca68d30114ad6a01da65631f8007d802fd3e6c9fac711251e6390323d
 
 RUN set -eux; \
 	\
@@ -139,9 +139,7 @@ RUN set -eux; \
 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; \
 	\
 	redis-cli --version; \
-	redis-server --version; \
-	\
-	echo '{"spdxVersion":"SPDX-2.3","SPDXID":"SPDXRef-DOCUMENT","name":"redis-server-sbom","packages":[{"name":"redis-server","versionInfo":"7.2.3","SPDXID":"SPDXRef-Package--redis-server","externalRefs":[{"referenceCategory":"PACKAGE-MANAGER","referenceType":"purl","referenceLocator":"pkg:generic/redis-server@7.2.3?os_name=debian&os_version=bookworm"}],"licenseDeclared":"BSD-3-Clause"}]}' > /usr/local/redis.spdx.json
+	redis-server --version
 
 COPY config.sh /data/
 COPY start-cluster.sh /data/
