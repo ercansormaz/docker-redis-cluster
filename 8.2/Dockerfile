@@ -1,4 +1,4 @@
-FROM redis:8.4.0
+FROM redis:8.2.3
 
 LABEL maintainer="Ercan SORMAZ <me@ercan.dev>" \
       org.opencontainers.image.title="Redis Cluster for Local Development" \
@@ -8,19 +8,19 @@ LABEL maintainer="Ercan SORMAZ <me@ercan.dev>" \
       org.opencontainers.image.source="https://github.com/ercansormaz/docker-redis-cluster" \
       org.opencontainers.image.documentation="https://github.com/ercansormaz/docker-redis-cluster/blob/main/README.md" \
       org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.version="8.4.0" \
-      org.opencontainers.image.ref.name="ercansormaz/redis-cluster:8.4.0"
+      org.opencontainers.image.version="8.2.3" \
+      org.opencontainers.image.ref.name="ercansormaz/redis-cluster:8.2.3"
 
 # Download create-cluster script from redis repository
-ADD https://raw.githubusercontent.com/redis/redis/refs/tags/8.4.0/utils/create-cluster/create-cluster /usr/local/bin/create-cluster
+ADD https://raw.githubusercontent.com/redis/redis/refs/tags/8.2.3/utils/create-cluster/create-cluster /usr/local/bin/create-cluster
 RUN chmod +x /usr/local/bin/create-cluster
 
 # Copy custom entrypoint script
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY ../entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Override create-cluster script settings
-COPY config.sh /data/config.sh
+COPY ../config.sh /data/config.sh
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
