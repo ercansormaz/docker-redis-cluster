@@ -1,7 +1,6 @@
 FROM redis:7.4.7
 
-LABEL maintainer="Ercan SORMAZ <me@ercan.dev>" \
-      org.opencontainers.image.title="Redis Cluster for Local Development" \
+LABEL org.opencontainers.image.title="Redis Cluster" \
       org.opencontainers.image.description="A lightweight Redis cluster setup for local development and testing. Based on the official Redis image and includes the create-cluster utility." \
       org.opencontainers.image.authors="Ercan SORMAZ <me@ercan.dev>" \
       org.opencontainers.image.url="https://hub.docker.com/r/ercansormaz/redis-cluster" \
