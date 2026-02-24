@@ -1,4 +1,4 @@
-FROM redis:8.6.0
+FROM redis:8.6.1
 
 LABEL org.opencontainers.image.title="Redis Cluster" \
       org.opencontainers.image.description="A lightweight Redis cluster setup for local development and testing. Based on the official Redis image and includes the create-cluster utility." \
@@ -7,11 +7,11 @@ LABEL org.opencontainers.image.title="Redis Cluster" \
       org.opencontainers.image.source="https://github.com/ercansormaz/docker-redis-cluster" \
       org.opencontainers.image.documentation="https://github.com/ercansormaz/docker-redis-cluster/blob/main/README.md" \
       org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.version="8.6.0" \
-      org.opencontainers.image.ref.name="ercansormaz/redis-cluster:8.6.0"
+      org.opencontainers.image.version="8.6.1" \
+      org.opencontainers.image.ref.name="ercansormaz/redis-cluster:8.6.1"
 
 # Download create-cluster script from redis repository
-ADD https://raw.githubusercontent.com/redis/redis/refs/tags/8.6.0/utils/create-cluster/create-cluster /usr/local/bin/create-cluster
+ADD https://raw.githubusercontent.com/redis/redis/refs/tags/8.6.1/utils/create-cluster/create-cluster /usr/local/bin/create-cluster
 RUN chmod +x /usr/local/bin/create-cluster
 
 # Copy custom entrypoint script
