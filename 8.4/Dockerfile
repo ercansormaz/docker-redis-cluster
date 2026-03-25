@@ -15,11 +15,11 @@ ADD https://raw.githubusercontent.com/redis/redis/refs/tags/8.4.2/utils/create-c
 RUN chmod +x /usr/local/bin/create-cluster
 
 # Copy custom entrypoint script
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY ../entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Override create-cluster script settings
-COPY config.sh /data/config.sh
+COPY ../config.sh /data/config.sh
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 
