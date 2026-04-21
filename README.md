@@ -1,7 +1,8 @@
 # 🧱 Redis Cluster Docker Image
 
 This repository provides a **custom Redis Cluster Docker image** based on the official Redis source.  
-It is preconfigured to run a **6-node Redis Cluster** (3 masters + 3 replicas) for local development or testing purposes.
+It is preconfigured to run a **6-node Redis Cluster** (3 masters + 3 replicas) for local development or testing purposes.  
+Detailed documentation and updates can be found on the [official project page](https://ercan.dev/projects/redis-cluster-docker-image).
 
 ---
 

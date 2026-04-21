@@ -1,14 +1,14 @@
 FROM redis:8.4.2
 
-LABEL org.opencontainers.image.title="Redis Cluster" \
-      org.opencontainers.image.description="A lightweight Redis cluster setup for local development and testing. Based on the official Redis image and includes the create-cluster utility." \
-      org.opencontainers.image.authors="Ercan SORMAZ <me@ercan.dev>" \
-      org.opencontainers.image.url="https://hub.docker.com/r/ercansormaz/redis-cluster" \
-      org.opencontainers.image.source="https://github.com/ercansormaz/docker-redis-cluster" \
-      org.opencontainers.image.documentation="https://github.com/ercansormaz/docker-redis-cluster/blob/main/README.md" \
-      org.opencontainers.image.licenses="MIT" \
-      org.opencontainers.image.version="8.4.2" \
-      org.opencontainers.image.ref.name="ercansormaz/redis-cluster:8.4.2"
+LABEL org.opencontainers.image.title="Redis Cluster"
+LABEL org.opencontainers.image.description="A lightweight Redis cluster setup for local development and testing. Based on the official Redis image and includes the create-cluster utility."
+LABEL org.opencontainers.image.vendor="Ercan SORMAZ"
+LABEL org.opencontainers.image.url="https://ercan.dev/projects/redis-cluster-docker-image"
+LABEL org.opencontainers.image.source="https://github.com/ercansormaz/docker-redis-cluster"
+LABEL org.opencontainers.image.documentation="https://github.com/ercansormaz/docker-redis-cluster/blob/main/README.md"
+LABEL org.opencontainers.image.licenses="MIT"
+LABEL org.opencontainers.image.version="8.4.2"
+LABEL org.opencontainers.image.ref.name="ercansormaz/redis-cluster:8.4.2"
 
 # Download create-cluster script from redis repository
 ADD https://raw.githubusercontent.com/redis/redis/refs/tags/8.4.2/utils/create-cluster/create-cluster /usr/local/bin/create-cluster
