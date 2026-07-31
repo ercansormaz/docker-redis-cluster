@@ -6,4 +6,5 @@ docker buildx build --platform linux/amd64,linux/arm64 -f 7.4/Dockerfile --push 
 docker buildx build --platform linux/amd64,linux/arm64 -f 8.2/Dockerfile --push -t ercansormaz/redis-cluster:8.2 -t ercansormaz/redis-cluster:8.2.8 .
 docker buildx build --platform linux/amd64,linux/arm64 -f 8.4/Dockerfile --push -t ercansormaz/redis-cluster:8.4 -t ercansormaz/redis-cluster:8.4.5 .
 docker buildx build --platform linux/amd64,linux/arm64 -f 8.6/Dockerfile --push -t ercansormaz/redis-cluster:8.6 -t ercansormaz/redis-cluster:8.6.5 .
-docker buildx build --platform linux/amd64,linux/arm64 -f 8.8/Dockerfile --push -t ercansormaz/redis-cluster:8.8 -t ercansormaz/redis-cluster:8.8.1 -t ercansormaz/redis-cluster:latest .
+docker buildx build --platform linux/amd64,linux/arm64 -f 8.8/Dockerfile --push -t ercansormaz/redis-cluster:8.8 -t ercansormaz/redis-cluster:8.8.1 .
+docker buildx build --platform linux/amd64,linux/arm64 -f 8.10/Dockerfile --push -t ercansormaz/redis-cluster:8.10 -t ercansormaz/redis-cluster:8.10.0 -t ercansormaz/redis-cluster:latest .
