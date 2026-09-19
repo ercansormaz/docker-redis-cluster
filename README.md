@@ -58,20 +58,6 @@ After this step, your cluster is ready to use!
 
 ---
 
-## 🧠 Verify Cluster Status
-
-You can verify the cluster configuration by running:
-```bash
-docker exec -it redis-cluster redis-cli -p 30001 cluster info
-```
-
-Or view connected nodes:
-```bash
-docker exec -it redis-cluster redis-cli -p 30001 cluster nodes
-```
-
----
-
 ## 🧼 Stop & Cleanup
 
 To stop the cluster:
@@ -87,9 +73,6 @@ docker rm -f redis-cluster
 ---
 
 ## 🔍 Troubleshooting
-
-- Cluster not initialized?  
-  Make sure you’ve run the `create-cluster create` command once after first start.
 
 - Ports already in use?  
   Ensure that ports `30001-30006` are free before running the container.
